@@ -1,15 +1,33 @@
-<div id="background-img"class="container">       
-    
-    </div>   
 
-    <nav mat-tab-nav-bar>
-        <a mat-tab-link
-        *ngFor="let link of navLinks"
-        [routerLink]="link.link"
-        routerLinkActive #rla="routerLinkActive"
-        [active]="rla.isActive">
-        {{link.label}}
+
+
+        <amplify-authenticator>
+            <ng-template
+              amplifySlot="authenticated"
+              let-user="user"
+              let-signOut="signOut"
+            >
+              
+
+
+            <div id="background-img"class="container">       
+    
+            </div>   
         
-        </a>
-        </nav>
-        <router-outlet></router-outlet>
+            <nav mat-tab-nav-bar>
+                <a mat-tab-link
+                *ngFor="let link of navLinks"
+                [routerLink]="link.link"
+                routerLinkActive #rla="routerLinkActive"
+                [active]="rla.isActive">
+                {{link.label}}
+                
+                </a>
+                </nav>
+                <router-outlet></router-outlet>
+
+
+
+              <button (click)="signOut()">Sign Out</button>
+            </ng-template>
+          </amplify-authenticator>

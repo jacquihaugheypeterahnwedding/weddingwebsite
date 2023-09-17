@@ -17,6 +17,15 @@
       "service": "AppSync"
     }
   },
+  "auth": {
+    "weddingwebsite": {
+      "customAuth": false,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "imported"
+    }
+  },
   "hosting": {
     "amplifyhosting": {
       "lastPushTimeStamp": "2023-09-17T13:16:45.156Z",
