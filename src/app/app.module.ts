@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [AppComponent, RestaurantsComponent, WelcomeComponent],
@@ -18,7 +20,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
     AmplifyAuthenticatorModule,
     /* configuring form modules */
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSlideToggleModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
