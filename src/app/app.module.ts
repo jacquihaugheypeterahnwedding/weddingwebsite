@@ -8,9 +8,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
-  declarations: [AppComponent, RestaurantsComponent],
+  declarations: [AppComponent, RestaurantsComponent, WelcomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
