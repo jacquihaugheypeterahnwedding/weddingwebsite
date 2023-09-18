@@ -10,6 +10,7 @@ import { LodgingComponent } from './lodging/lodging.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 
 
+
 const routes: Routes = [
   { path: '', redirectTo: '/welcome', pathMatch: 'full' },
   { path: 'welcome', component:  WelcomeComponent},

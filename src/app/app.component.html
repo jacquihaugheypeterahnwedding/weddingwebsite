@@ -1,33 +1,26 @@
+<!-- Render loading if authStatus is still configuring  -->
+<ng-container *ngIf="authenticator.authStatus === 'configuring'">
+    Loading...
+  </ng-container>
+  
+  <!-- Only render this if there's an authenticated user -->
+  <ng-container *ngIf="authenticator.authStatus === 'authenticated'">
+    Welcome back!
+    <div id="background-img"class="container">       
+    
+    </div>  
+    <button (click)="signOut()">Sign Out</button>
 
-
-
-        <amplify-authenticator>
-            <ng-template
+  </ng-container>
+  
+  <!-- Render sign-in screen otherwise with authenticator -->
+  <ng-container *ngIf="authenticator.authStatus !== 'authenticated'">
+    <amplify-authenticator>
+        <ng-template
               amplifySlot="authenticated"
               let-user="user"
               let-signOut="signOut"
-            >
-              
+            />
+    </amplify-authenticator>
+  </ng-container>
 
-
-            <div id="background-img"class="container">       
-    
-            </div>   
-        
-            <nav mat-tab-nav-bar>
-                <a mat-tab-link
-                *ngFor="let link of navLinks"
-                [routerLink]="link.link"
-                routerLinkActive #rla="routerLinkActive"
-                [active]="rla.isActive">
-                {{link.label}}
-                
-                </a>
-                </nav>
-                <router-outlet></router-outlet>
-
-
-
-              <button (click)="signOut()">Sign Out</button>
-            </ng-template>
-          </amplify-authenticator>

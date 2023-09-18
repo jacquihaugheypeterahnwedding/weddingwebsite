@@ -19,6 +19,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { OurstoryComponent } from './ourstory/ourstory.component';
 import { LodgingComponent } from './lodging/lodging.component';
 import { EventsComponent } from './events/events.component';
+import { CognitoService } from './cognito.service';
 
 @NgModule({
   declarations: [AppComponent, RestaurantsComponent, WelcomeComponent, OurstoryComponent, LodgingComponent, EventsComponent],
@@ -33,7 +34,9 @@ import { EventsComponent } from './events/events.component';
     MatTabsModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    CognitoService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
