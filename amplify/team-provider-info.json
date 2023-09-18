@@ -20,6 +20,9 @@
           "appId": "dntdgfoni7vqr",
           "type": "cicd"
         }
+      },
+      "auth": {
+        "weddingwebsite": {}
       }
     }
   },
