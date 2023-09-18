@@ -5,10 +5,25 @@
   
   <!-- Only render this if there's an authenticated user -->
   <ng-container *ngIf="authenticator.authStatus === 'authenticated'">
-    Welcome back!
-    <div id="background-img"class="container">       
+
+    <div id="background-img" class="container">       
     
     </div>  
+
+
+    <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+        <a mat-tab-link
+        *ngFor="let link of navLinks"
+        [routerLink]="link.link"
+        routerLinkActive #rla="routerLinkActive"
+        [active]="rla.isActive">
+        {{link.label}}
+        
+        </a>
+        </nav>
+        <mat-tab-nav-panel #tabPanel id="panel">
+          <router-outlet></router-outlet>
+        </mat-tab-nav-panel>
     <button (click)="signOut()">Sign Out</button>
 
   </ng-container>

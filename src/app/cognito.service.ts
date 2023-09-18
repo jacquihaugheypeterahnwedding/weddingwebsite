@@ -21,7 +21,6 @@ export class CognitoService {
   public loggedIn = false;
 
   constructor() {
-    console.log('in cognite');
 
     this.authenticationSubject = new BehaviorSubject<boolean>(false);
   }
@@ -40,7 +39,6 @@ export class CognitoService {
   public auth_signin(user: string, password: string): Promise<any> {
     return Auth.signIn(user, password)
     .then(() => {
-        console.log('auto signing');
       this.authenticationSubject.next(true);
     });
   }
@@ -48,7 +46,6 @@ export class CognitoService {
   public signIn(user: IUser): Promise<any> {
     return Auth.signIn(user.email, user.password)
     .then(() => {
-        console.log('here');
       this.authenticationSubject.next(true);
     });
   }
@@ -56,7 +53,6 @@ export class CognitoService {
   public signOut(): Promise<any> {
     return Auth.signOut()
     .then(() => {
-        console.log('out');
       this.authenticationSubject.next(false);
     });
   }

@@ -1,9 +1,20 @@
 #background-img {  
-    color: #fff;
     background-image: url("../assets/lightwood.jpeg");  
-    background-size: 100% ;  
-    background-size: cover;  
-    height: 100%;
-    width: 100%;
-    opacity: 0.5;
+    min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 70%;
 } 
+
+
+#panel {
+    color: white;
+}

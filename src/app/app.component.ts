@@ -58,7 +58,6 @@ export class AppComponent {
     });
 
     this.route.queryParams.subscribe(params => {
-      console.log(this.authenticator.authStatus);
       if (this.authenticator.authStatus != 'authenticated') {
         if ('user' in params && 'pass' in params) {
           Auth.signIn(params['user'], params['pass']);
