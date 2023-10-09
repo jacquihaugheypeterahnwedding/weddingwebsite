@@ -16,15 +16,17 @@
         *ngFor="let link of navLinks"
         [routerLink]="link.link"
         routerLinkActive #rla="routerLinkActive"
-        [active]="rla.isActive">
-        {{link.label}}
+        [active]="rla.isActive"
+        i18n>
+        {{link.label}}   <!--{{ '6/15/15' | date:undefined:undefined:'ko-KR' }}-->
         
         </a>
         </nav>
-        <mat-tab-nav-panel #tabPanel id="panel">
+        <mat-tab-nav-panel #tabPanel >
           <router-outlet></router-outlet>
         </mat-tab-nav-panel>
     <button (click)="signOut()">Sign Out</button>
+
 
   </ng-container>
   

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { AmplifyAuthenticatorModule } from '@aws-amplify/ui-angular';
+import { registerLocaleData } from '@angular/common';
 
 /* new form imports */
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -20,6 +21,11 @@ import { OurstoryComponent } from './ourstory/ourstory.component';
 import { LodgingComponent } from './lodging/lodging.component';
 import { EventsComponent } from './events/events.component';
 import { CognitoService } from './cognito.service';
+
+import localeEn from '@angular/common/locales/en';
+registerLocaleData(localeEn);
+import localeKo from '@angular/common/locales/ko';
+registerLocaleData(localeKo);
 
 @NgModule({
   declarations: [AppComponent, RestaurantsComponent, WelcomeComponent, OurstoryComponent, LodgingComponent, EventsComponent],
