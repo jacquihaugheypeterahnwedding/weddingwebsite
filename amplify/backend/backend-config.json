@@ -34,6 +34,38 @@
     }
   },
   "parameters": {
+    "AMPLIFY_auth_weddingwebsite_nativeClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "weddingwebsite"
+        }
+      ]
+    },
+    "AMPLIFY_auth_weddingwebsite_userPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "weddingwebsite"
+        }
+      ]
+    },
+    "AMPLIFY_auth_weddingwebsite_userPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "weddingwebsite"
+        }
+      ]
+    },
+    "AMPLIFY_auth_weddingwebsite_webClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "weddingwebsite"
+        }
+      ]
+    },
     "AMPLIFY_hosting_amplifyhosting_appId": {
       "usedBy": [
         {

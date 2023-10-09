@@ -22,7 +22,12 @@
         }
       },
       "auth": {
-        "weddingwebsite": {}
+        "weddingwebsite": {
+          "userPoolId": "us-east-1_aQ1IyfFvO",
+          "userPoolName": "weddingusersdev",
+          "webClientId": "37j6sep0so4j4v12engntomik2",
+          "nativeClientId": "37j6sep0so4j4v12engntomik2"
+        }
       }
     }
   },
