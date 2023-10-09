@@ -6,6 +6,8 @@ import { Auth } from 'aws-amplify';
 
 import { AuthenticatorService } from '@aws-amplify/ui-angular';
 
+import { I18n } from 'aws-amplify';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,6 +17,12 @@ export class AppComponent {
 
   navLinks: any[];
   activeLinkIndex = -1; 
+
+  text = I18n.get('Test String!');
+  I18n = I18n;
+
+
+
   constructor(private route: ActivatedRoute, private router: Router, private cognitoService: CognitoService, public authenticator: AuthenticatorService) {
     this.navLinks = [
         {
@@ -47,9 +55,10 @@ export class AppComponent {
   }
 
 
+
+
   ngOnInit(): void {
 
-    
 
     this.router.events.subscribe((res) => {
         this.activeLinkIndex = this.navLinks.indexOf(this.navLinks.find(tab => tab.link === '.' + this.router.url));
@@ -67,7 +76,16 @@ export class AppComponent {
       
     });
 
+ 
 
+
+  }
+
+
+  switchLanguage() {
+    console.log('switch')
+    I18n.setLanguage('ko-KR');
+    this.text = I18n.get('Test String!');
   }
 
 
