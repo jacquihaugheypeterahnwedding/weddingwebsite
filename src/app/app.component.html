@@ -6,7 +6,10 @@
   <!-- Only render this if there's an authenticated user -->
   <ng-container *ngIf="authenticator.authStatus === 'authenticated'">
 
-    <div id="background-img" class="container">       
+    <div id="background-img">       
+    
+    </div>  
+    <div id="flowers" >       
     
     </div>  
 
@@ -17,14 +20,22 @@
         [routerLink]="link.link"
         routerLinkActive #rla="routerLinkActive"
         [active]="rla.isActive"
+        class="tab"
         i18n>
-        {{link.label}}   <!--{{ '6/15/15' | date:undefined:undefined:'ko-KR' }}-->
+        <span class="test">
+          {{link.label}} 
+        </span>
+         <!--{{ '6/15/15' | date:undefined:undefined:'ko-KR' }}-->
         
         </a>
         </nav>
         <mat-tab-nav-panel #tabPanel >
           <router-outlet></router-outlet>
         </mat-tab-nav-panel>
+
+
+
+        <!--
         <ng-container i18n>Hello i18n!</ng-container>
 
         <h1>{{text}}</h1>
@@ -34,6 +45,7 @@
       <button (click)="switchLanguage()">Switch language</button>
 
     <button (click)="signOut()">Sign Out</button>
+        -->
 
 
   </ng-container>

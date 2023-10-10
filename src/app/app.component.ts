@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CognitoService } from './cognito.service';
 
@@ -11,7 +11,8 @@ import { I18n } from 'aws-amplify';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
 
