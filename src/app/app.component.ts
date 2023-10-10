@@ -23,7 +23,7 @@ export class AppComponent {
 
 
 
-  constructor(private route: ActivatedRoute, private router: Router, private cognitoService: CognitoService, public authenticator: AuthenticatorService) {
+  constructor(private route: ActivatedRoute, private router: Router, private cognitoService: CognitoService,public authenticator: AuthenticatorService) {
     this.navLinks = [
         {
             label: 'Welcome',

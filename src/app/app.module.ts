@@ -25,6 +25,7 @@ import { CognitoService } from './cognito.service';
 import localeEn from '@angular/common/locales/en';
 registerLocaleData(localeEn);
 import localeKo from '@angular/common/locales/ko';
+import { UserService } from './user.service';
 registerLocaleData(localeKo);
 
 @NgModule({
@@ -42,6 +43,7 @@ registerLocaleData(localeKo);
   ],
   providers: [
     CognitoService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })
