@@ -26,10 +26,11 @@ import localeEn from '@angular/common/locales/en';
 registerLocaleData(localeEn);
 import localeKo from '@angular/common/locales/ko';
 import { UserService } from './user.service';
+import { UserComponent } from './user/user.component';
 registerLocaleData(localeKo);
 
 @NgModule({
-  declarations: [AppComponent, RestaurantsComponent, WelcomeComponent, OurstoryComponent, LodgingComponent, EventsComponent],
+  declarations: [AppComponent, RestaurantsComponent, WelcomeComponent, OurstoryComponent, LodgingComponent, EventsComponent, UserComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

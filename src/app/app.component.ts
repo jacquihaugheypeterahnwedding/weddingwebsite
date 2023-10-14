@@ -46,7 +46,11 @@ export class AppComponent {
           label: 'Our Story',
           link: './ourstory',
           index: 4
-      }, 
+      }, {
+        label: 'User',
+        link: './user',
+        index: 4
+    }, 
     ];
 
     

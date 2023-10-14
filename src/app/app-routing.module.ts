@@ -8,6 +8,7 @@ import { OurstoryComponent } from './ourstory/ourstory.component';
 import { EventsComponent } from './events/events.component';
 import { LodgingComponent } from './lodging/lodging.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
+import { UserComponent } from './user/user.component';
 
 
 
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'events', component: EventsComponent},
   { path: 'lodging', component: LodgingComponent},
   { path: 'restaurants', component: RestaurantsComponent},
+  { path: 'user', component: UserComponent},
 ];
 export const appRouting = RouterModule.forRoot(routes);
 @NgModule({
