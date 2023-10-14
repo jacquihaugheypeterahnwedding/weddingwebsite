@@ -1,5 +1,95 @@
 # this is an auto generated file. This will be overwritten
 
+subscription OnCreateHotel($filter: ModelSubscriptionHotelFilterInput) {
+  onCreateHotel(filter: $filter) {
+    id
+    name
+    address
+    phone
+    description
+    image
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateHotel($filter: ModelSubscriptionHotelFilterInput) {
+  onUpdateHotel(filter: $filter) {
+    id
+    name
+    address
+    phone
+    description
+    image
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteHotel($filter: ModelSubscriptionHotelFilterInput) {
+  onDeleteHotel(filter: $filter) {
+    id
+    name
+    address
+    phone
+    description
+    image
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvent($filter: ModelSubscriptionEventFilterInput) {
+  onCreateEvent(filter: $filter) {
+    id
+    name
+    date
+    start
+    stop
+    image
+    description
+    address
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvent($filter: ModelSubscriptionEventFilterInput) {
+  onUpdateEvent(filter: $filter) {
+    id
+    name
+    date
+    start
+    stop
+    image
+    description
+    address
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvent($filter: ModelSubscriptionEventFilterInput) {
+  onDeleteEvent(filter: $filter) {
+    id
+    name
+    date
+    start
+    stop
+    image
+    description
+    address
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
 subscription OnCreateUserSettings(
   $filter: ModelSubscriptionUserSettingsFilterInput
 ) {

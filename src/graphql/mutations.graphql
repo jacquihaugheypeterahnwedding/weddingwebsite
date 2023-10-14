@@ -1,5 +1,113 @@
 # this is an auto generated file. This will be overwritten
 
+mutation CreateHotel(
+  $input: CreateHotelInput!
+  $condition: ModelHotelConditionInput
+) {
+  createHotel(input: $input, condition: $condition) {
+    id
+    name
+    address
+    phone
+    description
+    image
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+mutation UpdateHotel(
+  $input: UpdateHotelInput!
+  $condition: ModelHotelConditionInput
+) {
+  updateHotel(input: $input, condition: $condition) {
+    id
+    name
+    address
+    phone
+    description
+    image
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+mutation DeleteHotel(
+  $input: DeleteHotelInput!
+  $condition: ModelHotelConditionInput
+) {
+  deleteHotel(input: $input, condition: $condition) {
+    id
+    name
+    address
+    phone
+    description
+    image
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+mutation CreateEvent(
+  $input: CreateEventInput!
+  $condition: ModelEventConditionInput
+) {
+  createEvent(input: $input, condition: $condition) {
+    id
+    name
+    date
+    start
+    stop
+    image
+    description
+    address
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+mutation UpdateEvent(
+  $input: UpdateEventInput!
+  $condition: ModelEventConditionInput
+) {
+  updateEvent(input: $input, condition: $condition) {
+    id
+    name
+    date
+    start
+    stop
+    image
+    description
+    address
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+mutation DeleteEvent(
+  $input: DeleteEventInput!
+  $condition: ModelEventConditionInput
+) {
+  deleteEvent(input: $input, condition: $condition) {
+    id
+    name
+    date
+    start
+    stop
+    image
+    description
+    address
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
 mutation CreateUserSettings(
   $input: CreateUserSettingsInput!
   $condition: ModelUserSettingsConditionInput

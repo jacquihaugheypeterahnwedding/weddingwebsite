@@ -12,14 +12,16 @@ export class UserComponent {
 
   I18n = I18n;
 
-  text = 'one'
-  x = 4
+  text = null;
 
-  constructor (private appRef: ApplicationRef) {
+
+  constructor () {
     
   }
 
-  ngOnInit(): void {
+
+
+  ngAfterContentChecked(): void {
     this.text = I18n.get('Test String!')
   }
 
@@ -28,10 +30,7 @@ export class UserComponent {
   switchLanguage() {
     console.log('switch')
     I18n.setLanguage('ko-KR');
-    //this.text = I18n.get('Test String!');
-    this.x = 7
-    this.appRef.tick();
-    this.ngOnInit()
+
   }
 
 }
