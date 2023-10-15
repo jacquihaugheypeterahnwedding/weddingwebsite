@@ -78,6 +78,17 @@ export class CognitoService {
     return Auth.currentUserInfo();
   }
 
+  async getUSerGroups(): Promise<void> {
+
+    Auth.currentAuthenticatedUser().then((value: any) => {
+      console.log('here')
+      console.log(value)
+      const groups = value.signInUserSession.accessToken.payload["cognito:groups"];
+      console.log(groups)
+    })
+    
+  }
+
   public updateUser(user: IUser): Promise<any> {
     return Auth.currentUserPoolUser()
     .then((cognitoUser: any) => {

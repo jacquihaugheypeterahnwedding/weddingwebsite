@@ -64,7 +64,7 @@ export class AppComponent {
 
   ngOnInit(): void {
 
-
+    this.cognitoService.getUSerGroups();
 
     this.router.events.subscribe((res) => {
         this.activeLinkIndex = this.navLinks.indexOf(this.navLinks.find(tab => tab.link === '.' + this.router.url));

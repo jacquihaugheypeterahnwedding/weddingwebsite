@@ -64,6 +64,8 @@ mutation CreateEvent(
     image
     description
     address
+    address_name
+    groups
     createdAt
     updatedAt
     __typename
@@ -83,6 +85,8 @@ mutation UpdateEvent(
     image
     description
     address
+    address_name
+    groups
     createdAt
     updatedAt
     __typename
@@ -102,6 +106,8 @@ mutation DeleteEvent(
     image
     description
     address
+    address_name
+    groups
     createdAt
     updatedAt
     __typename

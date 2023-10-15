@@ -117,6 +117,8 @@ export type CreateEventInput = {
   image?: string | null;
   description?: string | null;
   address?: string | null;
+  address_name?: string | null;
+  groups?: string | null;
 };
 
 export type ModelEventConditionInput = {
@@ -127,6 +129,8 @@ export type ModelEventConditionInput = {
   image?: ModelStringInput | null;
   description?: ModelStringInput | null;
   address?: ModelStringInput | null;
+  address_name?: ModelStringInput | null;
+  groups?: ModelStringInput | null;
   and?: Array<ModelEventConditionInput | null> | null;
   or?: Array<ModelEventConditionInput | null> | null;
   not?: ModelEventConditionInput | null;
@@ -142,6 +146,8 @@ export type Event = {
   image?: string | null;
   description?: string | null;
   address?: string | null;
+  address_name?: string | null;
+  groups?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -155,6 +161,8 @@ export type UpdateEventInput = {
   image?: string | null;
   description?: string | null;
   address?: string | null;
+  address_name?: string | null;
+  groups?: string | null;
 };
 
 export type DeleteEventInput = {
@@ -274,6 +282,8 @@ export type ModelEventFilterInput = {
   image?: ModelStringInput | null;
   description?: ModelStringInput | null;
   address?: ModelStringInput | null;
+  address_name?: ModelStringInput | null;
+  groups?: ModelStringInput | null;
   and?: Array<ModelEventFilterInput | null> | null;
   or?: Array<ModelEventFilterInput | null> | null;
   not?: ModelEventFilterInput | null;
@@ -366,6 +376,8 @@ export type ModelSubscriptionEventFilterInput = {
   image?: ModelSubscriptionStringInput | null;
   description?: ModelSubscriptionStringInput | null;
   address?: ModelSubscriptionStringInput | null;
+  address_name?: ModelSubscriptionStringInput | null;
+  groups?: ModelSubscriptionStringInput | null;
   and?: Array<ModelSubscriptionEventFilterInput | null> | null;
   or?: Array<ModelSubscriptionEventFilterInput | null> | null;
 };
@@ -433,6 +445,8 @@ export type CreateEventMutation = {
   image?: string | null;
   description?: string | null;
   address?: string | null;
+  address_name?: string | null;
+  groups?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -447,6 +461,8 @@ export type UpdateEventMutation = {
   image?: string | null;
   description?: string | null;
   address?: string | null;
+  address_name?: string | null;
+  groups?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -461,6 +477,8 @@ export type DeleteEventMutation = {
   image?: string | null;
   description?: string | null;
   address?: string | null;
+  address_name?: string | null;
+  groups?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -560,6 +578,8 @@ export type GetEventQuery = {
   image?: string | null;
   description?: string | null;
   address?: string | null;
+  address_name?: string | null;
+  groups?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -576,6 +596,8 @@ export type ListEventsQuery = {
     image?: string | null;
     description?: string | null;
     address?: string | null;
+    address_name?: string | null;
+    groups?: string | null;
     createdAt: string;
     updatedAt: string;
   } | null>;
@@ -674,6 +696,8 @@ export type OnCreateEventSubscription = {
   image?: string | null;
   description?: string | null;
   address?: string | null;
+  address_name?: string | null;
+  groups?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -688,6 +712,8 @@ export type OnUpdateEventSubscription = {
   image?: string | null;
   description?: string | null;
   address?: string | null;
+  address_name?: string | null;
+  groups?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -702,6 +728,8 @@ export type OnDeleteEventSubscription = {
   image?: string | null;
   description?: string | null;
   address?: string | null;
+  address_name?: string | null;
+  groups?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -866,6 +894,8 @@ export class APIService {
           image
           description
           address
+          address_name
+          groups
           createdAt
           updatedAt
         }
@@ -896,6 +926,8 @@ export class APIService {
           image
           description
           address
+          address_name
+          groups
           createdAt
           updatedAt
         }
@@ -926,6 +958,8 @@ export class APIService {
           image
           description
           address
+          address_name
+          groups
           createdAt
           updatedAt
         }
@@ -1165,6 +1199,8 @@ export class APIService {
           image
           description
           address
+          address_name
+          groups
           createdAt
           updatedAt
         }
@@ -1195,6 +1231,8 @@ export class APIService {
             image
             description
             address
+            address_name
+            groups
             createdAt
             updatedAt
           }
@@ -1427,6 +1465,8 @@ export class APIService {
           image
           description
           address
+          address_name
+          groups
           createdAt
           updatedAt
         }
@@ -1458,6 +1498,8 @@ export class APIService {
           image
           description
           address
+          address_name
+          groups
           createdAt
           updatedAt
         }
@@ -1489,6 +1531,8 @@ export class APIService {
           image
           description
           address
+          address_name
+          groups
           createdAt
           updatedAt
         }

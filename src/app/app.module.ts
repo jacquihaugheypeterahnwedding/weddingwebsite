@@ -13,7 +13,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatIconModule} from '@angular/material/icon';
+import {MatRadioModule} from '@angular/material/radio';
 import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatTabsModule} from '@angular/material/tabs';
@@ -29,17 +31,20 @@ import { UserService } from './user.service';
 import { UserComponent } from './user/user.component';
 registerLocaleData(localeKo);
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [AppComponent, RestaurantsComponent, WelcomeComponent, OurstoryComponent, LodgingComponent, EventsComponent, UserComponent],
   imports: [
     BrowserModule,
+    NgbModule,
     AppRoutingModule,
     AmplifyAuthenticatorModule,
     /* configuring form modules */
     FormsModule,
     ReactiveFormsModule,
-    MatSlideToggleModule, MatToolbarModule, MatButtonModule, MatIconModule,
-    MatTabsModule,
+    MatSlideToggleModule, MatToolbarModule, MatButtonModule, MatIconModule, MatCardModule,
+    MatTabsModule, MatRadioModule,
     BrowserAnimationsModule
   ],
   providers: [

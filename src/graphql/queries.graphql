@@ -46,6 +46,8 @@ query GetEvent($id: ID!) {
     image
     description
     address
+    address_name
+    groups
     createdAt
     updatedAt
     __typename
@@ -67,6 +69,8 @@ query ListEvents(
       image
       description
       address
+      address_name
+      groups
       createdAt
       updatedAt
       __typename
