@@ -7,7 +7,7 @@
     "email",
     "preferred_username"
   ],
-  "authProvidersUserPool": [],
+  "authProvidersUserPool": ["us-east-1_xMnJFtGBE"],
   "requiredAttributes": [
     "email"
   ],
