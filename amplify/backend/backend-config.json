@@ -4,10 +4,15 @@
       "dependsOn": [],
       "output": {
         "authConfig": {
-          "additionalAuthenticationProviders": [],
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ],
           "defaultAuthentication": {
             "apiKeyConfig": {
-              "apiKeyExpirationDays": 7
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
             },
             "authenticationType": "API_KEY"
           }
@@ -15,6 +20,15 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "AppSync"
+    }
+  },
+  "auth": {
+    "weddingwebsite": {
+      "customAuth": false,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "imported"
     }
   },
   "hosting": {
@@ -25,6 +39,38 @@
     }
   },
   "parameters": {
+    "AMPLIFY_auth_weddingwebsite_nativeClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "weddingwebsite"
+        }
+      ]
+    },
+    "AMPLIFY_auth_weddingwebsite_userPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "weddingwebsite"
+        }
+      ]
+    },
+    "AMPLIFY_auth_weddingwebsite_userPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "weddingwebsite"
+        }
+      ]
+    },
+    "AMPLIFY_auth_weddingwebsite_webClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "weddingwebsite"
+        }
+      ]
+    },
     "AMPLIFY_hosting_amplifyhosting_appId": {
       "usedBy": [
         {
